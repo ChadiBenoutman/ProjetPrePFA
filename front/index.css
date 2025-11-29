@@ -1,0 +1,209 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f0f2f5;
+}
+
+/* Le conteneur principal style "Carte" */
+.container {
+    background: #fff;
+    width: 900px;
+    height: 600px;
+    display: flex;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+/* Section Image (Gauche) */
+.image-section {
+    flex: 1;
+    background: linear-gradient(135deg, #00C9FF 0%, #92FE9D 100%); /* Dégradé frais */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    padding: 40px;
+    position: relative;
+}
+
+/* On peut ajouter une image de fond ici si désiré */
+.image-section::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: url('images.png/two-workers-in-blue-uniforms-converse-in-front-of-a-house-surrounded-by-containers-emphasizing-home-service-and-maintenance-png.png') center/cover;
+    opacity: 0.2; /* L'image est subtile derrière le dégradé */
+}
+
+.text-overlay {
+    position: relative;
+    z-index: 2;
+}
+
+.text-overlay h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+/* Section Formulaire (Droite) */
+.form-section {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+}
+
+.form-wrapper {
+    width: 100%;
+    max-width: 350px;
+}
+
+/* Onglets Connexion / Inscription */
+.toggle-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #eee;
+}
+
+.toggle-buttons button {
+    background: none;
+    border: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding-bottom: 10px;
+    cursor: pointer;
+    color: #aaa;
+    transition: 0.3s;
+}
+
+.toggle-buttons button.active {
+    color: #00C9FF;
+    border-bottom: 2px solid #00C9FF;
+}
+
+/* Styles des champs */
+h2 {
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 1.5rem;
+}
+
+.input-box {
+    margin-bottom: 15px;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.input-box input:focus {
+    border-color: #00C9FF;
+    box-shadow: 0 0 5px rgba(0, 201, 255, 0.2);
+}
+
+/* Bouton d'action principal */
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    background: #00C9FF;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+.submit-btn:hover {
+    background: #009ecb;
+}
+
+/* Options (checkbox, lien oubli) */
+.options {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.85rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.options a {
+    color: #00C9FF;
+    text-decoration: none;
+}
+
+/* Sélecteur de Rôle (Client vs Pro) */
+.role-selector {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.role-radio {
+    flex: 1;
+    position: relative;
+}
+
+.role-radio input {
+    display: none; /* Cache le bouton radio par défaut */
+}
+
+.role-btn {
+    display: block;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: 0.3s;
+    color: #666;
+}
+
+/* Style quand le radio est "checked" */
+.role-radio input:checked + .role-btn {
+    background-color: #e6f9ff;
+    border-color: #00C9FF;
+    color: #00C9FF;
+    font-weight: 600;
+}
+
+/* Utilitaires */
+.hidden {
+    display: none;
+}
+
+/* Responsive Mobile */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        width: 90%;
+        height: auto;
+    }
+    .image-section {
+        padding: 30px;
+        min-height: 150px;
+    }
+    .image-section h1 { font-size: 1.8rem; }
+    .form-section { padding: 30px; }
+}

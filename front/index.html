@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>Connexion - ServiceHome</title>
+</head>
+<body>
+
+    <div class="container">
+        <div class="image-section">
+            <div class="text-overlay">
+                <h1>ServiceHome</h1>
+                <p>Trouvez le professionnel idéal pour votre maison en quelques clics.</p>
+            </div>
+        </div>
+
+        <div class="form-section">
+            <div class="form-wrapper">
+                
+                <div class="toggle-buttons">
+                    <button id="loginBtn" class="active">Connexion</button>
+                    <button id="registerBtn">Inscription</button>
+                </div>
+
+                <form id="loginForm" class="input-group">
+                    <h2>Content de vous revoir !</h2>
+                    <div class="input-box">
+                        <input type="email" placeholder="Email" required>
+                    </div>
+                    <div class="input-box">
+                        <input type="password" placeholder="Mot de passe" required>
+                    </div>
+                    <div class="options">
+                        <label><input type="checkbox"> Se souvenir de moi</label>
+                        <a href="#">Mot de passe oublié ?</a>
+                    </div>
+                    <button type="submit" class="submit-btn">Se connecter</button>
+                </form>
+
+                <form id="registerForm" class="input-group hidden">
+                    <h2>Rejoignez la communauté</h2>
+                    
+                    <div class="role-selector">
+                        <label class="role-radio">
+                            <input type="radio" name="role" value="client" checked>
+                            <span class="role-btn">Je cherche un service</span>
+                        </label>
+                        <label class="role-radio">
+                            <input type="radio" name="role" value="provider">
+                            <span class="role-btn">Je suis un Pro</span>
+                        </label>
+                    </div>
+
+                    <div class="input-box">
+                        <input type="text" placeholder="Nom complet" required>
+                    </div>
+                    <div class="input-box">
+                        <input type="email" placeholder="Email" required>
+                    </div>
+                    <div class="input-box">
+                        <input type="password" placeholder="Mot de passe" required>
+                    </div>
+                    <button type="submit" class="submit-btn">Créer mon compte</button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
