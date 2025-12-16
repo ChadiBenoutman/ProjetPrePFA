@@ -3,73 +3,338 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doorstep - La Plateforme de Référence</title>
     <link rel="stylesheet" href="index.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <title>Connexion - ServiceHome</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-
-    <div class="container">
-        <div class="image-section">
-            <div class="text-overlay">
-                <h1>ServiceHome</h1>
-                <p>Trouvez le professionnel idéal pour votre maison en quelques clics.</p>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="images/doorsteplogo.png" class="logoprincipal">
+                <h1> Doorstep</h1>
             </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#"><i class="fas fa-home"></i> Accueil</a></li>
+                    <li><a href="#"><i class="fas fa-list-alt"></i> Catégories</a></li>
+                    <li><a href="#"><i class="fas fa-info-circle"></i> À propos</a></li>
+                    <li><a href="#"><i class="fas fa-envelope"></i> Contact</a></li>
+                </ul>
+            </nav>
         </div>
+    </header>
 
-        <div class="form-section">
-            <div class="form-wrapper">
-                
-                <div class="toggle-buttons">
-                    <button id="loginBtn" class="active">Connexion</button>
-                    <button id="registerBtn">Inscription</button>
+    <main class="main">
+        <section class="hero-search">
+            <div class="container">
+                <h2>Trouvez le service idéal près de chez vous, facilement.</h2>
+                <p>Des milliers de professionnels qualifiés sont à portée de clic. Démarrer votre recherche :</p>
+                <div class="search-bar">
+                    <input type="text" placeholder="Ex: 'Plombier' ou 'Jardinage à Fez'" aria-label="Rechercher un service ou une localité">
+                    <button type="submit" class="search-btn"><i class="fas fa-search"></i> Rechercher</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="main-section icon-categories">
+            <div class="container">
+                <h2>Parcourez nos catégories les plus populaires</h2>
+                <div class="icon-categories-grid">
+                    <a href="/frontend/bricolage.html" class="icon-category-card">
+                        <i class="fas fa-toolbox"></i>
+                        <p>Bricolage</p>
+                    </a>
+                    <a href="/frontend/automobile.html" class="icon-category-card">
+                        <i class="fas fa-car-side"></i>
+                        <p>Automobile</p>
+                    </a>
+                    <a href="#" class="icon-category-card">
+                        <i class="fas fa-broom"></i>
+                        <p>Ménage</p>
+                    </a>
+                    <a href="#" class="icon-category-card">
+                        <i class="fas fa-seedling"></i>
+                        <p>Jardinage</p>
+                    </a>
+                    <a href="#" class="icon-category-card">
+                        <i class="fas fa-laptop-code"></i>
+                        <p>Informatique</p>
+                    </a>
+                    <a href="#" class="icon-category-card">
+                        <i class="fas fa-paint-roller"></i>
+                        <p>Peinture</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="main-section signup-section-wrapper">
+            <div class="container">
+                <h2>Rejoignez notre communauté</h2>
+                <div class="signup-section">
+                    <div class="signup-card">
+                        <img src="images/service.png" alt="Proposer des services" class="signup-image">
+                        <div class="signup-content">
+                            <h3>S'inscrire pour proposer mes services</h3>
+                            <p>Développez votre clientèle. Gérez vos rendez-vous et votre réputation sur notre plateforme.</p>
+                            <a href="/frontend/inscriptionprestataire.html" class="signup-btn">Devenir Prestataire <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="signup-card">
+                        <img src="images/chercherService.webp" alt="Chercher des services" class="signup-image">
+                        <div class="signup-content">
+                            <h3>Inscription pour chercher des services</h3>
+                            <p>Accédez à un réseau de confiance et trouvez rapidement des solutions fiables.</p>
+                            <a href="/frontend/inscriptionclient.html" class="signup-btn">Trouver un Pro <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="main-section how-it-works">
+            <div class="container">
+                <h2>Simplicité en 3 étapes</h2>
+                <div class="how-it-works-grid">
+                    <div class="step-card">
+                        <span class="number-circle">1</span>
+                        <h3>Décrivez votre besoin</h3>
+                        <p>Utilisez la barre de recherche et les filtres pour affiner votre demande et spécifier votre zone.</p>
+                    </div>
+                    <div class="step-card">
+                        <span class="number-circle">2</span>
+                        <h3>Choisissez votre professionnel</h3>
+                        <p>Consultez les profils, les avis clients et les tarifs des prestataires disponibles.</p>
+                    </div>
+                    <div class="step-card">
+                        <span class="number-circle">3</span>
+                        <h3>Contactez et Réalisez</h3>
+                        <p>Prenez contact directement, réservez le service et évaluez la prestation une fois terminée.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="main-section services-section">
+            <div class="container">
+                <h2>Explorer d'autres domaines d'expertise</h2>
+
+                <div class="service-category">
+                    <h3><i class="fas fa-utensils"></i> Cuisine & Électroménager</h3>
+                    <div class="professional-listing-wrapper">
+                        
+                        <div class="professional-listing">
+                            <img src="images/logoMarjane.png" alt="Photo Marjane" class="pro-photo-placeholder">
+                            <div class="pro-details">
+                                <div class="pro-header">
+                                    <h4>Marjane</h4>
+                                    <div class="rating">
+                                        <i class="fas fa-star yellow"></i><i class="fas fa-star yellow"></i><i class="fas fa-star yellow"></i><i class="fas fa-star yellow"></i><i class="fas fa-star gray"></i>
+                                        <span>(4.2/5)</span>
+                                    </div>
+                                </div>
+                                <p class="pro-description">Vente d'appareils électroménagers neufs, garantis, et solutions de cuisine intégrée.</p>
+                                <span class="pro-tag"><i class="fas fa-store"></i> Grande Surface</span>
+                            </div>
+                        </div>
+                        
+                        <div class="professional-listing">
+                            <img src="images/logoElectroplanet.png" alt="Photo Electroplanet" class="pro-photo-placeholder">
+                            <div class="pro-details">
+                                <div class="pro-header">
+                                    <h4>Electroplanet</h4>
+                                    <div class="rating">
+                                        <i class="fas fa-star yellow"></i><i class="fas fa-star yellow"></i><i class="fas fa-star yellow"></i><i class="fas fa-star yellow"></i><i class="fas fa-star-half-alt yellow"></i>
+                                        <span>(4.7/5)</span>
+                                    </div>
+                                </div>
+                                <p class="pro-description">Expertise en gros et petits électroménagers. Conseils personnalisés et SAV spécialisé.</p>
+                                <span class="pro-tag"><i class="fas fa-wrench"></i> SAV & Garantie</span>
+                            </div>
+                        </div>
+
+                        <div class="professional-listing">
+                            <img src="images/aliReparateur.webp" alt="Photo Réparateur Ali" class="pro-photo-placeholder">
+                            <div class="pro-details">
+                                <div class="pro-header">
+                                    <h4>Réparateur Ali</h4>
+                                    <div class="rating">
+                                        <i class="fas fa-star yellow"></i><i class="fas fa-star yellow"></i><i class="fas fa-star yellow"></i><i class="fas fa-star gray"></i><i class="fas fa-star gray"></i>
+                                        <span>(3.1/5)</span>
+                                    </div>
+                                </div>
+                                <p class="pro-description">Réparation de fours, cuisinières et petits appareils. Service rapide à domicile sur Rabat.</p>
+                                <span class="pro-tag"><i class="fas fa-tools"></i> Réparation à Domicile</span>
+                            </div>
+                        </div>
+
+                        <div class="professional-listing">
+                            <img src="images/kitchenDesign.png" alt="Photo Kitchen Design" class="pro-photo-placeholder">
+                            <div class="pro-details">
+                                <div class="pro-header">
+                                    <h4>Kitchen Design Pro</h4>
+                                    <div class="rating">
+                                        <i class="fas fa-star yellow"></i><i class="fas fa-star yellow"></i><i class="fas fa-star yellow"></i><i class="fas fa-star yellow"></i><i class="fas fa-star-half-alt yellow"></i>
+                                        <span>(4.5/5)</span>
+                                    </div>
+                                </div>
+                                <p class="pro-description">Conception et installation de cuisines intégrées modernes et sur mesure (Casablanca).</p>
+                                <span class="pro-tag"><i class="fas fa-drafting-compass"></i> Sur Mesure</span>
+                            </div>
+                        </div>
+                        
+                    </div>
                 </div>
 
-                <form id="loginForm" class="input-group">
-                    <h2>Content de vous revoir !</h2>
-                    <div class="input-box">
-                        <input type="email" placeholder="Email" required>
-                    </div>
-                    <div class="input-box">
-                        <input type="password" placeholder="Mot de passe" required>
-                    </div>
-                    <div class="options">
-                        <label><input type="checkbox"> Se souvenir de moi</label>
-                        <a href="#">Mot de passe oublié ?</a>
-                    </div>
-                    <button type="submit" class="submit-btn">Se connecter</button>
-                </form>
+                <div class="service-category">
+                    <h3><i class="fas fa-bath"></i> Plomberie</h3>
+                    <div class="professional-listing-wrapper">
+                        
+                        <div class="professional-listing">
+                            <img src="images/plombierHicham.png" alt="Photo Hicham" class="pro-photo-placeholder">
+                            <div class="pro-details">
+                                <div class="pro-header">
+                                    <h4>Plombier Hicham (Casablanca)</h4>
+                                    <div class="rating">
+                                        <i class="fas fa-star yellow"></i><i class="fas fa-star yellow"></i><i class="fas fa-star yellow"></i><i class="fas fa-star yellow"></i><i class="fas fa-star yellow"></i>
+                                        <span>(5.0/5)</span>
+                                    </div>
+                                </div>
+                                <p class="pro-description">Dépannage d'urgence 24/7. Installation et réparation de chauffe-eau, sanitaires et fuites.</p>
+                                <span class="pro-tag"><i class="fas fa-shield-alt"></i> Urgence 24h/24</span>
+                            </div>
+                        </div>
+                        
+                        <div class="professional-listing">
+                            <img src="images/hydraprolLogo.png" alt="Photo HydraPro Maroc" class="pro-photo-placeholder">
+                            <div class="pro-details">
+                                <div class="pro-header">
+                                    <h4>HydraPro Maroc</h4>
+                                    <div class="rating">
+                                        <i class="fas fa-star yellow"></i><i class="fas fa-star yellow"></i><i class="fas fa-star yellow"></i><i class="fas fa-star-half-alt yellow"></i><i class="fas fa-star gray"></i>
+                                        <span>(3.8/5)</span>
+                                    </div>
+                                </div>
+                                <p class="pro-description">Spécialiste en rénovation de salle de bain et installation de systèmes d'irrigation.</p>
+                                <span class="pro-tag"><i class="fas fa-globe"></i> Rénovation</span>
+                            </div>
+                        </div>
 
-                <form id="registerForm" class="input-group hidden">
-                    <h2>Rejoignez la communauté</h2>
-                    
-                    <div class="role-selector">
-                        <label class="role-radio">
-                            <input type="radio" name="role" value="client" checked>
-                            <span class="role-btn">Je cherche un service</span>
-                        </label>
-                        <label class="role-radio">
-                            <input type="radio" name="role" value="provider">
-                            <span class="role-btn">Je suis un Pro</span>
-                        </label>
+                        <div class="professional-listing">
+                            <img src="images/maalemMounir.png" alt="Photo Maalem Mounir" class="pro-photo-placeholder">
+                            <div class="pro-details">
+                                <div class="pro-header">
+                                    <h4>Maalem Mounir (Marrakech)</h4>
+                                    <div class="rating">
+                                        <i class="fas fa-star yellow"></i><i class="fas fa-star yellow"></i><i class="fas fa-star yellow"></i><i class="fas fa-star yellow"></i><i class="fas fa-star gray"></i>
+                                        <span>(4.1/5)</span>
+                                    </div>
+                                </div>
+                                <p class="pro-description">Plomberie traditionnelle et moderne. Travaux d'assainissement et débouchage canalisation.</p>
+                                <span class="pro-tag"><i class="fas fa-city"></i> Traditionnel</span>
+                            </div>
+                        </div>
+                        
+                        <div class="professional-listing">
+                            <img src="images/TopFuiteDétection.png" alt="Photo Top Fuite" class="pro-photo-placeholder">
+                            <div class="pro-details">
+                                <div class="pro-header">
+                                    <h4>Top Fuite Détection</h4>
+                                    <div class="rating">
+                                        <i class="fas fa-star yellow"></i><i class="fas fa-star yellow"></i><i class="fas fa-star yellow"></i><i class="fas fa-star-half-alt yellow"></i><i class="fas fa-star gray"></i>
+                                        <span>(3.6/5)</span>
+                                    </div>
+                                </div>
+                                <p class="pro-description">Détection de fuites non destructives et intervention rapide dans la région de Tanger.</p>
+                                <span class="pro-tag"><i class="fas fa-tint"></i> Détection Fuite</span>
+                            </div>
+                        </div>
+                        
                     </div>
+                </div>
 
-                    <div class="input-box">
-                        <input type="text" placeholder="Nom complet" required>
-                    </div>
-                    <div class="input-box">
-                        <input type="email" placeholder="Email" required>
-                    </div>
-                    <div class="input-box">
-                        <input type="password" placeholder="Mot de passe" required>
-                    </div>
-                    <button type="submit" class="submit-btn">Créer mon compte</button>
-                </form>
+                <div class="service-category">
+                    <h3><i class="fas fa-bolt"></i> Électricité</h3>
+                    <div class="professional-listing-wrapper">
+                        
+                        <div class="professional-listing">
+                            <img src="images/electraService.png" alt="Photo Electra Service Rapide" class="pro-photo-placeholder">
+                            <div class="pro-details">
+                                <div class="pro-header">
+                                    <h4>Electra Service Rapide</h4>
+                                    <div class="rating">
+                                        <i class="fas fa-star yellow"></i><i class="fas fa-star yellow"></i><i class="fas fa-star yellow"></i><i class="fas fa-star yellow"></i><i class="fas fa-star-half-alt yellow"></i>
+                                        <span>(4.6/5)</span>
+                                    </div>
+                                </div>
+                                <p class="pro-description">Mise aux normes électriques (Certificat Consuel), dépannage rapide et installation de domotique.</p>
+                                <span class="pro-tag"><i class="fas fa-certificate"></i> Certifié</span>
+                            </div>
+                        </div>
 
+                        <div class="professional-listing">
+                            <img src="images/filiereelectro.png" alt="Photo Filiere Electricite" class="pro-photo-placeholder">
+                            <div class="pro-details">
+                                <div class="pro-header">
+                                    <h4>Filière Électricité</h4>
+                                    <div class="rating">
+                                        <i class="fas fa-star yellow"></i><i class="fas fa-star yellow"></i><i class="fas fa-star yellow"></i><i class="fas fa-star yellow"></i><i class="fas fa-star gray"></i>
+                                        <span>(4.0/5)</span>
+                                    </div>
+                                </div>
+                                <p class="pro-description">Installations complètes pour bâtiments neufs et rénovation lourde. Devis sur plan.</p>
+                                <span class="pro-tag"><i class="fas fa-building"></i> Neuf & Rénovation</span>
+                            </div>
+                        </div>
+
+                        <div class="professional-listing">
+                            <img src="images/solar.png" alt="Photo Solar Power" class="pro-photo-placeholder">
+                            <div class="pro-details">
+                                <div class="pro-header">
+                                    <h4>Solar Power Maroc</h4>
+                                    <div class="rating">
+                                        <i class="fas fa-star yellow"></i><i class="fas fa-star yellow"></i><i class="fas fa-star yellow"></i><i class="fas fa-star yellow"></i><i class="fas fa-star yellow"></i>
+                                        <span>(4.9/5)</span>
+                                    </div>
+                                </div>
+                                <p class="pro-description">Installation et maintenance de panneaux solaires résidentiels et industriels.</p>
+                                <span class="pro-tag"><i class="fas fa-solar-panel"></i> Énergie Solaire</span>
+                            </div>
+                        </div>
+
+                        <div class="professional-listing">
+                            <img src="images/lahcenElecto.png" alt="Photo Dépannage Lahcen" class="pro-photo-placeholder">
+                            <div class="pro-details">
+                                <div class="pro-header">
+                                    <h4>Dépannage Lahcen</h4>
+                                    <div class="rating">
+                                        <i class="fas fa-star yellow"></i><i class="fas fa-star yellow"></i><i class="fas fa-star yellow"></i><i class="fas fa-star gray"></i><i class="fas fa-star gray"></i>
+                                        <span>(3.2/5)</span>
+                                    </div>
+                                </div>
+                                <p class="pro-description">Petits travaux, changement de prises, fusibles et éclairage. Opère sur Agadir.</p>
+                                <span class="pro-tag"><i class="fas fa-lightbulb"></i> Petits Travaux</span>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
+        </section>
+    </main>
 
-    <script src="script.js"></script>
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Doorstep. Tous droits réservés. Propulsé par la communauté.</p>
+            <ul>
+                <li><a href="#">Politique de confidentialité</a></li>
+                <li><a href="#">Conditions d'utilisation</a></li>
+                <li><a href="#">Aide et Support</a></li>
+            </ul>
+        </div>
+    </footer>
 </body>
 </html>

@@ -1,0 +1,199 @@
+/*
+ * CSS pour Inscription Client
+ * Basé sur la charte graphique de Doorstep
+ */
+
+/* Reset de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', 'Arial', sans-serif;
+    background-color: #F8F9FA;
+    color: #343a40;
+    line-height: 1.6;
+}
+
+/* Utilitaires */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* En-tête (identique à l'index et prestataire) */
+.header {
+    background-color: #FFFFFF;
+    border-bottom: 2px solid #FFC107;
+    padding: 1rem 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.logoprincipal {
+    height: 3rem;
+}
+
+.logo h1 {
+    font-size: 1.8rem;
+    color: #0056B3;
+    font-weight: 700;
+}
+
+.back-link {
+    color: #0056B3;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.back-link:hover {
+    color: #FFC107;
+}
+
+/* Section d'inscription */
+.inscription-section {
+    padding: 3rem 0;
+    display: flex;
+    justify-content: center;
+}
+
+.form-card {
+    background-color: #FFFFFF;
+    padding: 3rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    max-width: 500px; /* Plus petit pour le client */
+    width: 100%;
+}
+
+.form-card h2 {
+    color: #0056B3;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.form-card .subtitle {
+    text-align: center;
+    color: #6C757D;
+    margin-bottom: 2rem;
+    border-bottom: 1px dashed #ced4da;
+    padding-bottom: 1rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #343a40;
+}
+
+.form-group label i {
+    color: #FFC107;
+    margin-right: 0.5rem;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group input[type="password"] {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-group input:focus {
+    border-color: #0056B3;
+    box-shadow: 0 0 0 0.2rem rgba(0, 86, 179, 0.25);
+    outline: none;
+}
+
+/* Styles pour la case à cocher (CGU) */
+.checkbox-group {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+}
+
+.checkbox-group input[type="checkbox"] {
+    margin-top: 5px;
+    width: auto;
+    margin-right: 0.75rem;
+    accent-color: #0056B3; /* Couleur de la coche */
+}
+
+.checkbox-group label {
+    display: inline;
+    font-weight: 400;
+    margin-bottom: 0;
+    font-size: 0.95rem;
+}
+
+.checkbox-group label a {
+    color: #0056B3;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.checkbox-group label a:hover {
+    text-decoration: underline;
+}
+
+.submit-btn {
+    width: 100%;
+    background-color: #FFC107; /* Bouton Jaune pour le client, différent du prestataire */
+    color: #0056B3;
+    border: none;
+    padding: 1rem;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.submit-btn:hover {
+    background-color: #FFA000;
+    transform: translateY(-2px);
+}
+
+/* Pied de page (similaire à l'index) */
+.footer {
+    background-color: #343a40;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .form-card {
+        padding: 2rem;
+    }
+
+    .form-card h2 {
+        font-size: 1.7rem;
+    }
+}
