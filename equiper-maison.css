@@ -5,10 +5,8 @@ body{background:#f5f7fb;color:#1f2937}
 
 .header{background:#fff;box-shadow:0 4px 10px rgba(0,0,0,.1)}
 .header-flex{display:flex;justify-content:space-between;align-items:center;padding:1rem}
-
-.search-header{display:flex;background:#eef2ff;border-radius:30px}
-.search-header input{border:none;padding:.6rem 1rem;background:none;outline:none}
-.search-header button{border:none;background:#0a529e;color:#fff;padding:0 1rem}
+.logoimg{width:50px;height:auto;margin-right:10px}
+.logo{display:flex;align-items:center;color:#0a529e;font-size:1.2rem;font-weight:700;text-decoration:none}
 
 .hero{background:linear-gradient(135deg,#0a529e,#001e3f);color:#fff;text-align:center;padding:4rem 1rem}
 .hero h2{font-size:3rem;color:#ffc107}
@@ -141,4 +139,84 @@ body{background:#f5f7fb;color:#1f2937}
 
 .slider {
   overflow-x: hidden; /* masque la barre de scroll */
+}
+/* Menu toggle */
+.menu-btn {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.menu {
+  display: flex;
+  gap: 1rem;
+}
+
+.menu a {
+  color: #3b4cd2;
+  text-decoration: none;
+  font-weight: 500;
+  padding: .5rem 1rem;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.menu a:hover {
+  background: rgba(255,255,255,0.2);
+}
+
+/* Recherche créative après hero h2 */
+.hero-search {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.hero-search input {
+  padding: 0.7rem 1rem;
+  border-radius: 30px;
+  border: none;
+  outline: none;
+  width: 200px;
+}
+
+.hero-search button {
+  background: #ffc107;
+  color: #001e3f;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.hero-search button:hover {
+  background: #e6b800;
+}
+
+/* Responsive menu toggle */
+@media screen and (max-width: 768px){
+  .menu {
+    display: none;
+    flex-direction: column;
+    background: #0a529e;
+    position: absolute;
+    top: 70px;
+    right: 1rem;
+    padding: 1rem;
+    border-radius: 10px;
+    gap: 1rem;
+  }
+
+  .menu.active {
+    display: flex;
+  }
+
+  .menu-btn {
+    display: block;
+  }
 }

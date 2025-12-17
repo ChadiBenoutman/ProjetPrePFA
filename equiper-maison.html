@@ -15,21 +15,37 @@
 <header class="header">
   <div class="container header-flex">
     <div class="logo">
+      <img src="img/doorsteplogo.png" alt="" class="logoimg">
       <h1>Doorstep</h1>
     </div>
 
-    <div class="search-header">
-      <input type="text" placeholder="Service ou magasin">
-      <input type="text" placeholder="Ville">
-      <button><i class="fas fa-search"></i></button>
-    </div>
+    <!-- Toggle Menu -->
+    <button class="menu-btn" id="menu-btn">
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <nav class="menu" id="menu">
+      <a href="index.html">Accueil</a>
+      <a href="inscription.html">Inscription</a>
+      <a href="services.html">Services</a>
+      <a href="magasins.html">Magasins</a>
+      <a href="contact.html">Contact</a>
+    </nav>
   </div>
 </header>
 
 <section class="hero">
   <h2>Équiper la maison</h2>
   <p>Tous les magasins et services pour votre habitat</p>
+
+  <!-- Recherche créative -->
+  <div class="hero-search">
+    <input type="text" placeholder="Service ou magasin">
+    <input type="text" placeholder="Ville">
+    <button><i class="fas fa-search"></i></button>
+  </div>
 </section>
+
 
 <section class="city">
   <h3>Équiper la maison à <span>Paris</span></h3>

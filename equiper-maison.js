@@ -127,3 +127,12 @@ function slide(id, dir){
 
 // 4️ Charger toutes les sections au démarrage
 Object.keys(data).forEach(load);
+
+// Toggle menu
+const menuBtn = document.getElementById('menu-btn');
+const menu = document.getElementById('menu');
+
+menuBtn.addEventListener('click', () => {
+  menu.classList.toggle('active');
+});
+
