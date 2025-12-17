@@ -9,6 +9,20 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
+<div class="map-modal" id="mapModal">
+  <div class="map-content">
+    <span class="close-map">&times;</span>
+    <h3>Choisir une ville sur la carte</h3>
+    <div id="map"></div>
+  </div>
+</div>
+
+<!-- Leaflet -->
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+/>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
 <body>
 
@@ -51,9 +65,29 @@
 
 
 <section class="city">
-  <h3>Équiper la maison à <span>Paris</span></h3>
-  <button>Changer la ville</button>
+  <h3>Équiper la maison à <span id="current-city">Casablanca</span></h3>
+
+  <div class="city-selector">
+    <button class="city-btn">
+      <i class="fas fa-map-marker-alt"></i>
+      Changer la ville
+    </button>
+
+    <div class="city-dropdown">
+      <span data-city="Casablanca">Casablanca</span>
+      <span data-city="Rabat">Rabat</span>
+      <span data-city="Marrakech">Marrakech</span>
+      <span data-city="Tanger">Tanger</span>
+      <span data-city="Agadir">Agadir</span>
+      <button class="map-btn">
+  <i class="fas fa-map"></i> Choisir sur la carte
+</button>
+
+    </div>
+  </div>
 </section>
+
+
 
 <section class="categories">
   <button class="active">Électroménager</button>
