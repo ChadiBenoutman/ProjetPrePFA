@@ -1,11 +1,94 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <title>DoorStep</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+
+<!-- ================= HEADER ================= -->
+<header>
+
+  <!-- LEFT : LOGO -->
+  <div class="header-left">
+    <a href="index.html">
+      <img src="logo.png" alt="DoorStep Logo" width="40">
+      <span>DoorStep</span>
+    </a>
+  </div>
+
+  <!-- CENTER : SEARCH -->
+  <div class="header-center">
+    <input type="text" placeholder="De quoi avez-vous besoin ?">
+    <input type="text" placeholder="Quartier / Ville">
+    <button>Lancer la recherche</button>
+  </div>
+
+  <!-- RIGHT : HISTORIQUE + MENU -->
+  <div class="header-right">
+    <a href="historique.html">Mon historique</a>
+    <button class="menu-btn">Menu</button>
+  </div>
+
+</header>
+<!-- ========================================== -->
+
+
+<!-- ================= INTRO ================= -->
+<section class="intro">
+  <h1>Équiper la maison</h1>
+  <p>Tous les services et magasins pour votre maison</p>
+</section>
+<!-- ========================================= -->
+
+
+<!-- ================= CITY ================= -->
+<section class="city-section">
+  <h2>Équiper la maison à Paris</h2>
+  <button>Changer la ville</button>
+</section>
+<!-- ======================================== -->
+
+
+<!-- ================= CATEGORIES ================= -->
+<section class="categories">
+  <button>Électroménager</button>
+  <button>Meubles</button>
+  <button>Dépôt-vente</button>
+  <button>Décoration</button>
+  <button>Chauffage</button>
+  <button>Climatisation</button>
+  <button>Chauffe-eau</button>
+</section>
+<!-- ============================================ -->
+
+
+<!-- ================= RESULTS HEADER ================= -->
+<section class="results-header">
+
+  <div class="results-title">
+    <h2>Magasins d’électroménager</h2>
+  </div>
+
+  <div class="results-navigation">
+    <button>Voir les 400 résultats</button>
+    <button>&lt;</button>
+    <span>4 / 400</span>
+    <button>&gt;</button>
+  </div>
+
+</section>
+<!-- ================================================ -->
+
+
+<!-- ================= CARDS ================= -->
+<section class="cards-container">
+  <!-- Les cartes seront générées automatiquement par JS -->
+</section>
+<!-- ========================================= -->
+
+
+<script src="script.js"></script>
 </body>
 </html>
