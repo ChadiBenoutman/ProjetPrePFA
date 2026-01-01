@@ -1,3 +1,4 @@
+const shopsroutes = require('./Routes/shops');
 const express = require('express');
 const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
@@ -7,13 +8,13 @@ const cors = require('cors');
 const app = express();
 app.use(express.json());
 app.use(cors());
-
 // Connexion à MongoDB
-const mongoURI = process.env.MONGODB_URI || 'mongodb+srv://driss:driss123@driss.otqicoq.mongodb.net/doorstep?retryWrites=true&w=majority';
+const mongoURI = process.env.MONGODB_URI || 'mongodb+srv://yam_ouki:maryemmaryem@projetprepfa.rzg56fg.mongodb.net/?appName=ProjetPREPFA';
 mongoose.connect(mongoURI)
   .then(() => console.log('Connected to MongoDB'))
   .catch(err => console.error('MongoDB connection error:', err));
 
+app.use('/api/shops', shopsroutes);
 // Modèle User
 const userSchema = new mongoose.Schema({
   name: { type: String, required: true },
