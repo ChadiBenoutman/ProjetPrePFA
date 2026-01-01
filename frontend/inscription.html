@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choisir votre compte | Doorstep</title>
+    <link rel="stylesheet" href="inscriptionclient.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* Styles spécifiques pour l'interface de choix */
+        .choice-container {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 2rem 0;
+        }
+
+        .choice-card {
+            background-color: #FFFFFF;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            overflow: hidden;
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .choice-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .choice-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .choice-content {
+            padding: 2rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .choice-content h3 {
+            color: #0056B3;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .choice-content p {
+            color: #6C757D;
+            margin-bottom: 2rem;
+            font-size: 0.95rem;
+        }
+
+        .choice-header {
+            text-align: center;
+            margin-bottom: 1rem;
+            padding-top: 2rem;
+        }
+
+        .choice-header h2 {
+            color: #0056B3;
+            font-size: 2.2rem;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="images/doorsteplogo.png" class="logoprincipal" alt="Logo Doorstep">
+                <h1> Doorstep</h1>
+            </div>
+            <nav class="nav">
+                <a href="index.html" class="back-link"><i class="fas fa-arrow-left"></i> Retour à l'accueil</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <section class="inscription-section">
+            <div class="container">
+                <div class="choice-header">
+                    <h2>Rejoignez notre communauté</h2>
+                    <p class="subtitle">Choisissez le profil qui vous correspond le mieux</p>
+                </div>
+
+                <div class="choice-container">
+                    <div class="choice-card">
+                        <img src="images/service.png" alt="Proposer des services" class="choice-image">
+                        <div class="choice-content">
+                            <div>
+                                <h3>Devenir Prestataire</h3>
+                                <p>Proposez vos services, gérez vos interventions et développez votre activité auprès de nouveaux clients.</p>
+                            </div>
+                            <a href="/frontend/inscriptionprestataire.html" class="submit-btn" style="text-decoration: none; display: block;">S'inscrire comme Pro</a>
+                        </div>
+                    </div>
+
+                    <div class="choice-card">
+                        <img src="images/chercherService.webp" alt="Chercher des services" class="choice-image">
+                        <div class="choice-content">
+                            <div>
+                                <h3>Chercher un Service</h3>
+                                <p>Trouvez rapidement des experts qualifiés, consultez les avis et contactez les professionnels en un clic.</p>
+                            </div>
+                            <a href="/frontend/inscriptionclient.html" class="submit-btn" style="text-decoration: none; display: block;">S'inscrire comme Client</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Doorstep. Tous droits réservés.</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -54,15 +54,73 @@ body {
     font-weight: 700;
 }
 
-.back-link {
-    color: #0056B3;
+.nav ul {
+    list-style: none;
+    display: flex;
+}
+
+.nav li {
+    margin-left: 1.5rem;
+}
+
+.nav a {
+    color: #343a40;
     text-decoration: none;
     font-weight: 500;
+    padding: 0.5rem 0;
     transition: color 0.3s ease;
 }
 
-.back-link:hover {
-    color: #FFC107;
+.nav a:hover {
+    color: #FFC107; /* Jaune au survol */
+}
+
+.auth-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.signup-btn {
+    background-color: #FFC107;
+    color: #0056B3;
+    border: 2px solid #FFC107;
+}
+
+.signup-btn:hover {
+    background-color: #FFA000;
+    border-color: #FFA000;
+}
+
+.signup-btn.active {
+    background-color: #0056B3;
+    color: white;
+    border-color: #0056B3;
+}
+
+.back-button {
+    display: flex;
+}
+
+.back-btn {
+    background-color: #6c757d;
+    color: white;
+    border: 2px solid #6c757d;
+}
+
+.back-btn:hover {
+    background-color: #5a6268;
+    border-color: #5a6268;
 }
 
 /* Section d'inscription */
@@ -202,6 +260,24 @@ hr {
 
 /* Responsive */
 @media (max-width: 768px) {
+    .header .container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .auth-buttons {
+        justify-content: center;
+    }
+
+    .back-button {
+        justify-content: center;
+    }
+
     .form-card {
         padding: 2rem;
     }

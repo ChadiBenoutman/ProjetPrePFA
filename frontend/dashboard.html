@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Compte - Doorstep</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="images/doorsteplogo.png" class="logoprincipal">
+                <h1> Doorstep</h1>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i> Accueil</a></li>
+                    <li><a href="dashboard.html"><i class="fas fa-tachometer-alt"></i> Mon Compte</a></li>
+                    <li><a href="#" id="logout-link"><i class="fas fa-sign-out-alt"></i> Déconnexion</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <section class="dashboard-section">
+            <div class="container">
+                <div class="dashboard-header">
+                    <h2><i class="fas fa-user-circle"></i> Bienvenue, <span id="user-name">Utilisateur</span></h2>
+                    <p id="user-type">Type de compte : <span id="account-type">Client</span></p>
+                </div>
+
+                <div class="dashboard-grid">
+                    <!-- Section Profil -->
+                    <div class="dashboard-card">
+                        <h3><i class="fas fa-user-edit"></i> Mon Profil</h3>
+                        <div class="profile-info">
+                            <p><strong>Email :</strong> <span id="user-email">email@example.com</span></p>
+                            <p><strong>Téléphone :</strong> <span id="user-phone">Non spécifié</span></p>
+                            <p><strong>Ville :</strong> <span id="user-city">Non spécifiée</span></p>
+                            <p><strong>Statut :</strong> <span id="user-status">Actif</span></p>
+                        </div>
+                        <button class="btn edit-btn"><i class="fas fa-edit"></i> Modifier Profil</button>
+                    </div>
+
+                    <!-- Section Actions selon le type -->
+                    <div class="dashboard-card" id="actions-card">
+                        <h3><i class="fas fa-tasks"></i> Mes Actions</h3>
+                        <div id="client-actions" class="actions-list" style="display: none;">
+                            <a href="#" class="action-link"><i class="fas fa-search"></i> Rechercher un service</a>
+                            <a href="#" class="action-link"><i class="fas fa-history"></i> Mes commandes</a>
+                            <a href="#" class="action-link"><i class="fas fa-star"></i> Mes favoris</a>
+                            <a href="#" class="action-link"><i class="fas fa-comments"></i> Mes messages</a>
+                        </div>
+                        <div id="prestataire-actions" class="actions-list" style="display: none;">
+                            <a href="#" class="action-link"><i class="fas fa-plus-circle"></i> Ajouter un service</a>
+                            <a href="#" class="action-link"><i class="fas fa-list-alt"></i> Mes services</a>
+                            <a href="#" class="action-link"><i class="fas fa-calendar-alt"></i> Mes rendez-vous</a>
+                            <a href="#" class="action-link"><i class="fas fa-chart-line"></i> Statistiques</a>
+                        </div>
+                        <div id="admin-actions" class="actions-list" style="display: none;">
+                            <a href="#" class="action-link"><i class="fas fa-users"></i> Gérer les utilisateurs</a>
+                            <a href="#" class="action-link"><i class="fas fa-user-check"></i> Valider prestataires</a>
+                            <a href="#" class="action-link"><i class="fas fa-cog"></i> Paramètres système</a>
+                        </div>
+                    </div>
+
+                    <!-- Section Notifications -->
+                    <div class="dashboard-card">
+                        <h3><i class="fas fa-bell"></i> Notifications</h3>
+                        <div class="notifications">
+                            <div class="notification-item">
+                                <i class="fas fa-info-circle"></i>
+                                <p>Bienvenue sur Doorstep ! Découvrez nos nouveaux services.</p>
+                            </div>
+                            <div class="notification-item" id="pending-notification" style="display: none;">
+                                <i class="fas fa-clock"></i>
+                                <p>Votre compte prestataire est en attente de validation.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Section Crédits/Statistiques -->
+                    <div class="dashboard-card">
+                        <h3><i class="fas fa-chart-bar"></i> Mes Statistiques</h3>
+                        <div class="stats-grid">
+                            <div class="stat-item">
+                                <div class="stat-number" id="services-count">0</div>
+                                <div class="stat-label">Services utilisés</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number" id="reviews-count">0</div>
+                                <div class="stat-label">Avis donnés</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number" id="favorites-count">0</div>
+                                <div class="stat-label">Favoris</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Doorstep. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Vérifier si l'utilisateur est connecté
+        const token = localStorage.getItem('token');
+        const user = JSON.parse(localStorage.getItem('user') || '{}');
+
+        if (!token || !user.name) {
+            window.location.href = 'connexion.html';
+        }
+
+        // Remplir les informations utilisateur
+        document.getElementById('user-name').textContent = user.name;
+        document.getElementById('user-email').textContent = user.email;
+        document.getElementById('account-type').textContent = user.type === 'client' ? 'Client' : user.type === 'prestataire' ? 'Prestataire' : 'Administrateur';
+
+        // Afficher les actions selon le type
+        if (user.type === 'client') {
+            document.getElementById('client-actions').style.display = 'block';
+        } else if (user.type === 'prestataire') {
+            document.getElementById('prestataire-actions').style.display = 'block';
+            // Vérifier si le compte est en attente
+            fetch('http://localhost:4000/api/check-status', {
+                headers: { 'Authorization': token }
+            }).then(res => res.json()).then(data => {
+                if (data.status === 'pending') {
+                    document.getElementById('pending-notification').style.display = 'block';
+                    document.getElementById('user-status').textContent = 'En attente de validation';
+                } else {
+                    document.getElementById('user-status').textContent = 'Validé';
+                }
+            });
+        } else if (user.isAdmin) {
+            document.getElementById('admin-actions').style.display = 'block';
+            document.getElementById('account-type').textContent = 'Administrateur';
+        }
+
+        // Gestion de la déconnexion
+        document.getElementById('logout-link').addEventListener('click', (e) => {
+            e.preventDefault();
+            localStorage.removeItem('token');
+            localStorage.removeItem('user');
+            window.location.href = 'index.html';
+        });
+    </script>
+</body>
+</html>

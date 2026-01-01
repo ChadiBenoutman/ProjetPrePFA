@@ -23,6 +23,15 @@
                     <li><a href="#"><i class="fas fa-envelope"></i> Contact</a></li>
                 </ul>
             </nav>
+            <div class="auth-buttons" id="auth-buttons">
+                <a href="connexion.html" class="btn signup-btn"><i class="fas fa-sign-in-alt"></i> Connexion</a>
+                <a href="inscription.html" class="btn signup-btn"><i class="fas fa-user-plus"></i> Inscription</a>
+            </div>
+            <div class="user-menu" id="user-menu" style="display: none;">
+                <span id="user-greeting">Bonjour, Utilisateur</span>
+                <a href="dashboard.html" class="btn user-btn"><i class="fas fa-user"></i> Mon Compte</a>
+                <a href="#" id="logout-link" class="btn logout-btn"><i class="fas fa-sign-out-alt"></i> Déconnexion</a>
+            </div>
         </div>
     </header>
 
@@ -330,11 +339,36 @@
         <div class="container">
             <p>&copy; 2025 Doorstep. Tous droits réservés. Propulsé par la communauté.</p>
             <ul>
-                <li><a href="#">Politique de confidentialité</a></li>
+                <li><a href="privacy.html">Politique de confidentialité</a></li>
                 <li><a href="#">Conditions d'utilisation</a></li>
                 <li><a href="#">Aide et Support</a></li>
             </ul>
         </div>
     </footer>
+
+    <script>
+        // Vérifier si l'utilisateur est connecté
+        const token = localStorage.getItem('token');
+        const user = JSON.parse(localStorage.getItem('user') || '{}');
+
+        if (token && user.name) {
+            // Utilisateur connecté : afficher le menu utilisateur
+            document.getElementById('auth-buttons').style.display = 'none';
+            document.getElementById('user-menu').style.display = 'flex';
+            document.getElementById('user-greeting').textContent = `Bonjour, ${user.name}`;
+        } else {
+            // Utilisateur non connecté : afficher les boutons connexion/inscription
+            document.getElementById('auth-buttons').style.display = 'flex';
+            document.getElementById('user-menu').style.display = 'none';
+        }
+
+        // Gestion de la déconnexion
+        document.getElementById('logout-link').addEventListener('click', (e) => {
+            e.preventDefault();
+            localStorage.removeItem('token');
+            localStorage.removeItem('user');
+            location.reload();
+        });
+    </script>
 </body>
 </html>

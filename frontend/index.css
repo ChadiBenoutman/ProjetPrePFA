@@ -135,6 +135,44 @@ body {
     transform: scale(1.05);
 }
 
+.auth-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.user-menu {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+#user-greeting {
+    color: #0056B3;
+    font-weight: 500;
+}
+
+.user-btn {
+    background-color: #FFC107;
+    color: #0056B3;
+    border: 2px solid #FFC107;
+}
+
+.user-btn:hover {
+    background-color: #FFA000;
+    border-color: #FFA000;
+}
+
+.logout-btn {
+    background-color: #dc3545;
+    color: white;
+    border: 2px solid #dc3545;
+}
+
+.logout-btn:hover {
+    background-color: #c82333;
+    border-color: #c82333;
+}
+
 /* Sections principales générales */
 .main-section {
     padding: 2rem 0;
@@ -503,5 +541,88 @@ body {
     }
     .service-category {
         padding: 1rem;
+    }
+}
+
+/* --- Style Profil et Crédits (CNT) --- */
+
+.nav-auth {
+    margin-left: 2rem;
+    padding-left: 1.5rem;
+    border-left: 1px solid #dee2e6; /* Séparation visuelle */
+}
+
+.user-status {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    line-height: 1.2;
+}
+
+.user-name {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #6c757d;
+}
+
+.user-credits {
+    font-size: 0.8rem;
+    color: #0056B3;
+    font-weight: 700;
+}
+
+.user-credits i {
+    color: #FFC107; /* Icône de pièce en Or */
+    margin-right: 2px;
+}
+
+.login-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: #f0f4f8;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    font-size: 0.9rem !important;
+    color: #0056B3 !important;
+    border: 1px solid transparent;
+    transition: all 0.3s ease !important;
+}
+
+.login-link:hover {
+    background-color: #0056B3;
+    color: white !important;
+    border-color: #0056B3;
+}
+
+.login-link i {
+    font-size: 1.2rem;
+}
+
+/* Ajustement Mobile */
+@media (max-width: 768px) {
+    .nav-auth {
+        margin-left: 0;
+        padding-left: 0;
+        border-left: none;
+        margin-top: 1rem;
+        width: 100%;
+    }
+    .user-status {
+        justify-content: center;
+        flex-direction: row-reverse;
+    }
+    .auth-buttons {
+        justify-content: center;
+    }
+    .user-menu {
+        flex-direction: column;
+        gap: 0.5rem;
     }
 }

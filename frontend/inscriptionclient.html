@@ -12,12 +12,20 @@
     <header class="header">
         <div class="container">
             <div class="logo">
-                <img src="images/doorsteplogo.png" class="logoprincipal" alt="Logo Doorstep">
+                <img src="images/doorsteplogo.png" class="logoprincipal">
                 <h1> Doorstep</h1>
             </div>
             <nav class="nav">
-                <a href="index.html" class="back-link"><i class="fas fa-arrow-left"></i> Retour à l'accueil</a>
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i> Accueil</a></li>
+                    <li><a href="#"><i class="fas fa-list-alt"></i> Catégories</a></li>
+                    <li><a href="#"><i class="fas fa-info-circle"></i> À propos</a></li>
+                    <li><a href="#"><i class="fas fa-envelope"></i> Contact</a></li>
+                </ul>
             </nav>
+            <div class="back-button">
+                <a href="index.html" class="btn back-btn"><i class="fas fa-arrow-left"></i> Retour à l'accueil</a>
+            </div>
         </div>
     </header>
 
@@ -67,5 +75,33 @@
             <p>&copy; 2025 Doorstep. Tous droits réservés.</p>
         </div>
     </footer>
+
+    <script>
+        document.querySelector('.form-card form').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const name = document.getElementById('nom').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('telephone').value;
+            const city = document.getElementById('ville').value;
+            const password = document.getElementById('password').value;
+
+            try {
+                const response = await fetch('http://localhost:4000/api/register', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ name, email, password, type: 'client', phone, city })
+                });
+                const data = await response.json();
+                if (response.ok) {
+                    alert('Inscription réussie ! Vous pouvez maintenant vous connecter.');
+                    window.location.href = 'connexion.html';
+                } else {
+                    alert(data.message);
+                }
+            } catch (err) {
+                alert('Erreur d\'inscription');
+            }
+        });
+    </script>
 </body>
 </html>
