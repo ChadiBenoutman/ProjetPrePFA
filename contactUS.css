@@ -1,0 +1,110 @@
+  body {
+        margin: 0;
+        font-family: 'Arial', sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background: linear-gradient(135deg, #007BFF, #FFD54F, #f5f5f5, #B0B0B0);
+        background-size: 400% 400%;
+        animation: gradientMove 15s ease infinite;
+        padding: 20px;
+    }
+
+    @keyframes gradientMove {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+    }
+
+   
+    .contact-container {
+        background-color: #ffffff;
+        max-width: 600px;
+        width: 100%;
+        padding: 40px;
+        border-radius: 15px;
+        box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+        position: relative;
+        overflow: hidden;
+        animation: float 6s ease-in-out infinite;
+    }
+
+    @keyframes float {
+        0%,100% { transform: translateY(0); }
+        50% { transform: translateY(-8px); }
+    }
+
+    h1 {
+        text-align: center;
+        color: #007BFF;
+        margin-bottom: 30px;
+    }
+
+   
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    input, textarea {
+        padding: 15px 20px;
+        margin-bottom: 20px;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+        font-size: 16px;
+        transition: all 0.3s ease;
+    }
+
+    input:focus, textarea:focus {
+        border-color: #007BFF;
+        box-shadow: 0 0 8px rgba(0,123,255,0.3);
+        outline: none;
+        transform: scale(1.02);
+    }
+
+    textarea {
+        resize: vertical;
+        min-height: 120px;
+    }
+
+   
+    .btn {
+        background: linear-gradient(90deg, #FFC107, #FFD54F);
+        color: #fff;
+        padding: 15px;
+        border: none;
+        border-radius: 8px;
+        font-size: 18px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .btn:hover {
+        background: linear-gradient(90deg, #FFD54F, #FFC107);
+        transform: scale(1.05);
+    }
+
+
+    .contact-info {
+        margin-top: 25px;
+        text-align: center;
+        color: #555555;
+    }
+
+    @media (max-width: 600px) {
+        .contact-container {
+            padding: 30px 20px;
+        }
+
+        input, textarea {
+            font-size: 15px;
+            padding: 12px 15px;
+        }
+
+        .btn {
+            font-size: 16px;
+            padding: 12px;
+        }
+    }

@@ -1,0 +1,123 @@
+ body {
+        margin: 0;
+        font-family: 'Arial', sans-serif;
+        display: flex;
+        justify-content: center;
+        padding: 50px 20px;
+        min-height: 100vh;
+        background: linear-gradient(120deg, #007BFF, #FFD54F, #f5f5f5, #B0B0B0);
+        background-size: 400% 400%;
+        animation: gradientMove 15s ease infinite;
+    }
+
+    @keyframes gradientMove {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+    }
+
+    /* Conteneur principal */
+    .container {
+        background-color: #ffffff;
+        max-width: 900px;
+        width: 100%;
+        border-radius: 15px;
+        padding: 40px 50px;
+        box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+        position: relative;
+        overflow: hidden;
+    }
+
+    /* Décoratif léger */
+    .container::before {
+        content: "";
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: rgba(255, 223, 0, 0.05);
+        border-radius: 50%;
+        z-index: 0;
+        animation: float 20s linear infinite;
+    }
+
+    @keyframes float {
+        0%, 100% { transform: translate(0,0); }
+        50% { transform: translate(20px, 20px); }
+    }
+
+    /* Titres principaux */
+    h1 {
+        color: #007BFF;
+        font-size: 36px;
+        text-align: center;
+        margin-bottom: 40px;
+        z-index: 1;
+        position: relative;
+    }
+
+    h2 {
+        color: #FFD54F;
+        margin-top: 30px;
+        margin-bottom: 15px;
+        font-size: 24px;
+        border-bottom: 2px solid #007BFF;
+        padding-bottom: 5px;
+        z-index: 1;
+        position: relative;
+        transition: color 0.3s;
+    }
+
+    h2:hover {
+        color: #007BFF;
+        cursor: pointer;
+    }
+
+    p {
+        line-height: 1.8;
+        color: #333333;
+        font-size: 16px;
+        margin-bottom: 15px;
+        z-index: 1;
+        position: relative;
+    }
+
+    ul {
+        margin-left: 20px;
+        color: #333;
+    }
+
+    li {
+        margin-bottom: 10px;
+    }
+
+    /* Liens */
+    a {
+        color: #007BFF;
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+
+    a:hover {
+        color: #FFD54F;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+        .container {
+            padding: 30px 20px;
+        }
+
+        h1 {
+            font-size: 28px;
+        }
+
+        h2 {
+            font-size: 20px;
+        }
+
+        p, li {
+            font-size: 15px;
+        }
+    }
