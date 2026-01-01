@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "nom": "Boulanger Fès BHV",
+    "categorie": "Électroménager",
+    "adresse": "52 rue Rivoli 80060 Fès",
+    "distance": "393 m",
+    "image": "boulanger.jpg"
+  },
+  {
+    "id": 2,
+    "nom": "DARTY Fès",
+    "categorie": "Électroménager",
+    "adresse": "Centre ville, Fès",
+    "distance": "609 m",
+    "image": "darty.jpg"
+  },
+  {
+    "id": 3,
+    "nom": "Atlas Meubles",
+    "categorie": "Meubles",
+    "adresse": "Route Sefrou, Fès",
+    "distance": "1.2 km",
+    "image": "meuble.jpg"
+  },
+  {
+    "id": 4,
+    "nom": "Maison Décor",
+    "categorie": "Décoration",
+    "adresse": "Fès Médina",
+    "distance": "800 m",
+    "image": "deco.jpg"
+  }
+]
