@@ -1,4 +1,4 @@
-  /* Background animé pour toute la page */
+
     body {
         margin: 0;
         font-family: 'Arial', sans-serif;
@@ -10,14 +10,14 @@
     }
 
     @keyframes backgroundColors {
-        0% { background-color: #007BFF; }   /* bleu */
-        25% { background-color: #FFD54F; }  /* jaune */
-        50% { background-color: #f5f5f5; }  /* blanc */
-        75% { background-color: #B0B0B0; }  /* gris clair */
-        100% { background-color: #007BFF; } /* bleu */
+        0% { background-color: #007BFF; }   
+        25% { background-color: #FFD54F; }  
+        50% { background-color: #f5f5f5; }  
+        75% { background-color: #B0B0B0; }  
+        100% { background-color: #007BFF; } 
     }
 
-    /* Conteneur principal blanc */
+
     .confirmation-container {
         background-color: #ffffff;
         padding: 40px 50px;
@@ -32,7 +32,7 @@
         position: relative;
     }
 
-    /* Emoji et texte animés */
+    
     .confirmation-container .emoji {
         font-size: 50px;
         margin-bottom: 20px;
@@ -53,7 +53,7 @@
         animation: floatText 4s ease-in-out infinite;
     }
 
-    /* Bouton stylé */
+
     .confirmation-container .btn {
         background: linear-gradient(90deg, #FFC107, #FFD54F);
         color: #fff;
@@ -73,7 +73,7 @@
         transform: scale(1.05);
     }
 
-    /* Animations keyframes */
+ 
     @keyframes float {
         0%, 100% { transform: translateY(0); }
         50% { transform: translateY(-8px); }

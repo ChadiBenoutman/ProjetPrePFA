@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription Prestataire | Doorstep</title>
+    <link rel="stylesheet" href="inscriptionprestataire.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="images/doorsteplogo.png" class="logoprincipal" alt="Logo Doorstep">
+                <h1> Doorstep</h1>
+            </div>
+            <nav class="nav">
+                <a href="index.html" class="back-link"><i class="fas fa-arrow-left"></i> Retour à l'accueil</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <section class="inscription-section">
+            <div class="container">
+                <div class="form-card">
+                    <h2><i class="fas fa-briefcase"></i> Inscription Prestataire</h2>
+                    <p class="subtitle">Développez votre activité et trouvez de nouveaux clients. Veuillez remplir les informations demandées pour la vérification.</p>
+                    
+                    <form action="#" method="POST" enctype="multipart/form-data">
+                        <div class="form-group">
+                            <label for="nom"><i class="fas fa-user"></i> Nom et Prénom</label>
+                            <input type="text" id="nom" name="nom" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email"><i class="fas fa-envelope"></i> Adresse E-mail</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="telephone"><i class="fas fa-phone"></i> Numéro de Téléphone</label>
+                            <input type="tel" id="telephone" name="telephone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="service"><i class="fas fa-tools"></i> Votre Domaine de Service</label>
+                            <select id="service" name="service" required>
+                                <option value="">-- Sélectionnez un domaine --</option>
+                                <option value="plomberie">Plomberie</option>
+                                <option value="electricite">Électricité</option>
+                                <option value="jardinage">Jardinage</option>
+                                <option value="informatique">Informatique / Dépannage PC</option>
+                                <option value="autre">Autre...</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="ville"><i class="fas fa-map-marker-alt"></i> Ville d'Opération</label>
+                            <input type="text" id="ville" name="ville" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="password"><i class="fas fa-lock"></i> Mot de Passe</label>
+                            <input type="password" id="password" name="password" required>
+                        </div>
+
+                        <hr>
+                        
+                        <div class="verification-info">
+                            <h3><i class="fas fa-shield-alt"></i> Vérification d'Identité (Obligatoire)</h3>
+                            <p>Ces documents sont requis pour garantir la confiance et la sécurité de nos utilisateurs.</p>
+                        </div>
+
+                        <div class="form-group file-upload-group">
+                            <label for="photo"><i class="fas fa-camera"></i> Photo d'Identité (Visage Complètement visible)</label>
+                            <input type="file" id="photo" name="photo" accept="image/*" required>
+                            <small>Format: JPEG ou PNG. Maximum 5MB.</small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="cin"><i class="fas fa-id-card"></i> Numéro de CIN / Carte d'Identité</label>
+                            <input type="text" id="cin" name="cin" required>
+                        </div>
+
+                        <button type="submit" class="submit-btn"><i class="fas fa-paper-plane"></i> Soumettre ma Demande</button>
+
+                        <div class="submission-note">
+                            <p><strong><i class="fas fa-hourglass-half"></i> Note importante :</strong> Votre demande sera examinée par notre équipe sous 24 à 48 heures. Vous recevrez un e-mail de confirmation dès que votre compte aura été validé et activé.</p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Doorstep. Tous droits réservés.</p>
+        </div>
+    </footer>
+</body>
+</html>
