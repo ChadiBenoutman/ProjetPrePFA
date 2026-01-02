@@ -95,6 +95,15 @@ body {
 .hero-category h2 i {
     margin-right: 0.75rem;
 }
+.hero-category * {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-category::before {
+    z-index: 1;
+}
+
 
 .hero-category p {
     font-size: 1.1rem;
@@ -271,6 +280,9 @@ body {
     color: #FFA000;
 }
 
+
+
+
 /* Responsive */
 @media (max-width: 768px) {
     .header .container {
@@ -307,3 +319,4 @@ body {
         padding: 1rem;
     }
 }
+
